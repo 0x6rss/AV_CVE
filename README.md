@@ -1,5 +1,7 @@
 # AV_CVE
 # CVE Arama ve Klonlama Aracı
+![image](https://github.com/user-attachments/assets/43377902-660e-437a-8a20-e1dd852f9df6)
+
 
 Bu README dosyasını `README.md` adıyla proje dizininize ekleyin. Projenizi GitHub'a eklemek için aşağıdaki adımları izleyebilirsiniz:
 
@@ -50,6 +52,8 @@ Yardım: Mevcut komutlar hakkında bilgi alın.
 
 Örnek Kullanım
 Belirli bir CVE ID'sini veya anahtar kelimeyi aramak için: "1" seçeneğini seçin ve CVE ID'sini veya anahtar kelimeyi girin.
+![cve12](https://github.com/user-attachments/assets/00c7b391-2c04-474b-b937-950df46e4a51)
+
 Yeni CVE'leri aramak için: "2" seçeneğini seçin.
 Belirli bir tarihte oluşturulan CVE'leri aramak için: "3" seçeneğini seçin ve tarihi girin.
 Programdan çıkmak için: "5" seçeneğini seçin.
