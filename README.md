@@ -25,11 +25,11 @@ Gerekli Python modüllerini yüklemek için aşağıdaki adımları izleyin:
 
    settings.json dosyasına GitHub tokeninizi ekleyin veya program çalışırken tokeni girin.
    github tokeni aşağıdaki gibi oluşturabilirsiniz:
-1) ![image](https://github.com/user-attachments/assets/5474e9b7-31fb-4df7-8a1e-745ba8962622)
-2) ![image](https://github.com/user-attachments/assets/f762c2d8-b825-4cde-8164-dafc32c63b71)
-3) ![image](https://github.com/user-attachments/assets/f5f08b2d-89f3-4026-85ad-18502f88ea1d)
-4) ![image](https://github.com/user-attachments/assets/1963b6cc-9e6d-4ecf-93cb-68afc69255d9)
-5) ![image](https://github.com/user-attachments/assets/e6399366-23d7-43a2-8619-8118e0af6b4e)
+1) ![image](https://github.com/user-attachments/assets/5474e9b7-31fb-4df7-8a1e-745ba8962622) <br>
+2) ![image](https://github.com/user-attachments/assets/f762c2d8-b825-4cde-8164-dafc32c63b71) <br>
+3) ![image](https://github.com/user-attachments/assets/f5f08b2d-89f3-4026-85ad-18502f88ea1d) <br>
+4) ![image](https://github.com/user-attachments/assets/1963b6cc-9e6d-4ecf-93cb-68afc69255d9) <br>
+5) ![image](https://github.com/user-attachments/assets/e6399366-23d7-43a2-8619-8118e0af6b4e) <br>
 6) ![image](https://github.com/user-attachments/assets/a7cd1608-8597-4265-9f05-309f5805c6e1)
 
 
