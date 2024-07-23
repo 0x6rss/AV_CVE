@@ -6,7 +6,7 @@ Bu proje, GitHub API'sini kullanarak yeni CVE'leri aramak ve klonlamak için gel
 
 
 
-Bu proje, GitHub API'sini kullanarak yeni CVE'leri aramak ve klonlamak için geliştirilmiş bir araçtır. Araç, CVE açıklamalarını Türkçeye çevirmek için `googletrans` modülünü kullanır ve zengin terminal çıktıları için `rich` modülünü kullanır.
+Bu proje, GitHub API'sini kullanarak yeni CVE'leri aramak ve klonlamak için geliştirilmiş bir araçtır.
 
 ## Gereksinimler
 
