@@ -1,9 +1,10 @@
 # AV_CVE
 # CVE Arama ve Klonlama Aracı
+Bu proje, GitHub API'sini kullanarak yeni CVE'leri aramak ve klonlamak için geliştirilmiş bir araçtır
 ![image](https://github.com/user-attachments/assets/43377902-660e-437a-8a20-e1dd852f9df6)
 
 
-Bu README dosyasını `README.md` adıyla proje dizininize ekleyin. Projenizi GitHub'a eklemek için aşağıdaki adımları izleyebilirsiniz:
+
 
 Bu proje, GitHub API'sini kullanarak yeni CVE'leri aramak ve klonlamak için geliştirilmiş bir araçtır. Araç, CVE açıklamalarını Türkçeye çevirmek için `googletrans` modülünü kullanır ve zengin terminal çıktıları için `rich` modülünü kullanır.
 
