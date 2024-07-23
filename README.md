@@ -57,5 +57,4 @@ Belirli bir CVE ID'sini veya anahtar kelimeyi aramak için: "1" seçeneğini se�
 Yeni CVE'leri aramak için: "2" seçeneğini seçin.
 Belirli bir tarihte oluşturulan CVE'leri aramak için: "3" seçeneğini seçin ve tarihi girin.
 Programdan çıkmak için: "5" seçeneğini seçin.
-Katkıda Bulunma
-Katkıda bulunmak için lütfen bir issue oluşturun veya bir pull request gönderin.
+
