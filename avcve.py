@@ -12,7 +12,7 @@ import threading
 from tzlocal import get_localzone
 from googletrans import Translator
 
-# Function to check if a package is installed
+
 def is_package_installed(package):
     try:
         subprocess.check_output([sys.executable, '-m', 'pip', 'show', package])
@@ -20,11 +20,10 @@ def is_package_installed(package):
     except subprocess.CalledProcessError:
         return False
 
-# Function to install a package
 def install_package(package):
     subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
-# Install required packages if not installed
+
 def setup():
     packages = [
         "requests",
@@ -45,25 +44,23 @@ def setup():
     else:
         subprocess.call('clear', shell=True)
 
-# Global variables
 SETTINGS_FILE = 'settings.json'
 LAST_SEARCH_FILE = 'last_search.json'
 console = Console()
 translator = Translator()
 
-# Function to load settings from JSON file
+
 def load_settings():
     if os.path.exists(SETTINGS_FILE):
         with open(SETTINGS_FILE, 'r') as file:
             return json.load(file)
     return {}
 
-# Function to save settings to JSON file
 def save_settings(settings):
     with open(SETTINGS_FILE, 'w') as file:
         json.dump(settings, file)
 
-# Function to get GitHub token from user input or settings file
+
 def get_github_token():
     settings = load_settings()
     if 'GITHUB_TOKEN' in settings:
@@ -73,7 +70,7 @@ def get_github_token():
     save_settings(settings)
     return token
 
-# Function to load last search time from JSON file
+
 def load_last_search_time():
     if os.path.exists(LAST_SEARCH_FILE):
         with open(LAST_SEARCH_FILE, 'r') as file:
@@ -81,12 +78,12 @@ def load_last_search_time():
             return datetime.fromisoformat(data['last_search_time'])
     return None
 
-# Function to save last search time to JSON file
+
 def save_last_search_time(time):
     with open(LAST_SEARCH_FILE, 'w') as file:
         json.dump({'last_search_time': time.isoformat()}, file)
 
-# Function to handle existing last search file
+
 def handle_existing_last_search_file():
     if os.path.exists(LAST_SEARCH_FILE):
         console.print("[bold yellow]Son arama dosyası zaten mevcut. Bu yeni CVE'leri bulmayı engelleyebilir.[/bold yellow]")
@@ -101,7 +98,7 @@ def handle_existing_last_search_file():
         else:
             console.print("[bold yellow]Mevcut son arama dosyası ile devam ediliyor.[/bold yellow]")
 
-# Function to clone repository using git
+
 def clone_repository(repo_url, repo_name):
     try:
         subprocess.run(["git", "clone", repo_url, repo_name], check=True)
@@ -109,7 +106,6 @@ def clone_repository(repo_url, repo_name):
     except subprocess.CalledProcessError:
         console.print(f"[bold red]{repo_name} klonlanamadı[/bold red]")
 
-# Function to fetch repositories from GitHub API
 def fetch_repositories(url, headers, repos):
     try:
         response = requests.get(url, headers=headers)
@@ -122,7 +118,7 @@ def fetch_repositories(url, headers, repos):
     except requests.exceptions.RequestException as e:
         console.print(f"[bold red]Bir hata oluştu: {str(e)}[/bold red]")
 
-# Function to translate descriptions
+
 def translate_description(description):
     if description:
         try:
@@ -133,7 +129,7 @@ def translate_description(description):
             return description
     return '[bold red]Açıklama yok[/bold red]'
 
-# Function to search for new CVEs
+
 def search_new_cves():
     github_token = get_github_token()
     timezone = str(get_localzone())
@@ -187,7 +183,7 @@ def search_new_cves():
 
     save_last_search_time(datetime.now())
 
-# Function to search for a specific CVE or keyword
+
 def search_specific_cve_or_keyword(search_term):
     github_token = get_github_token()
     headers = {'Authorization': f'token {github_token}'}
@@ -228,7 +224,7 @@ def search_specific_cve_or_keyword(search_term):
     else:
         console.print(f"[bold red]{search_term} için depo bulunamadı.[/bold red]")
 
-# Function to search CVEs based on a specific date
+
 def search_cves_by_date():
     while True:
         try:
@@ -281,7 +277,7 @@ def search_cves_by_date():
     else:
         console.print(f"[bold red]{search_date.strftime('%Y-%m-%d')} tarihinde yeni CVE bulunamadı.[/bold red]")
 
-# Function to handle user input and actions
+
 def main():
     setup()
     handle_existing_last_search_file()
